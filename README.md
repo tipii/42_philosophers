@@ -1,4 +1,4 @@
-# philosophers
+# philosophers @ 42
 
 ## GOALS
 * Learn how to make threads
@@ -36,22 +36,3 @@
 * The status printed should not be scrambled or intertwined with another philosopher’s status.
 * You can’t have more than 10 ms between the death of a philosopher and when it will print its death.
 * Again, philosophers should avoid to die!
-
-## philo_one 
-* External functions 
-	* memset : fill a byte string with a byte value
-	* malloc
-	* free
-	* write
-	* usleep : suspend thread execution for an interval measured in microseconds
-	* gettimeofday
-	* pthread_create : Creates a new thread of execution.
-	* pthread_detach : Marks a thread for deletion.
-	* pthread_join : Causes the calling thread to wait for the termination of the specified thread.
-	* pthread_mutex_init : Initialize a mutex with specified attributes.
-	* pthread_mutex_destroy : Destroy a mutex.
-	* pthread_mutex_lock : Lock a mutex and block until it becomes available.
-	* pthread_mutex_unlock : Unlock a mutex.
-* One fork between each philosopher, therefore there will be a fork at the right and at the left of each philosopher.
-* To avoid philosophers duplicating forks, you should protect the forks state with a mutex for each of them.
-* Each philosopher should be a thread.
