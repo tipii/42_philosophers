@@ -5,18 +5,6 @@
 * How to work on the same memory space
 * Notions : mutex, semaphore and shared memory
 
-## RULES
-* Coded in C, respecting the norm
-* n philosophers are sitting at a table and have one of three state : eat, think, sleep
-* philoserphers share one memory space (spaghetti bowl)
-* a philosopher must eat with two forks, one for each hand		?? Two forks to make ??
-* philosophers should not die (starving)
-* every philosopher need to eat
-* a philosopher doesn't talk to another and dont know when another die		?? Some wait for to access mutex ??
-* when finish eating, he goes to sleep		?? when he used mutex, change state for waiting ??
-* sleep -> think		?? from waiting to wait free mutex ??
-* simulation stop when a philosopher die
-
 ## TECHNICAL
 * Options for ./exec : number_of_philosophers, time_to_die, time_to_eat, time_to_sleep, [nbr_philo_must_eat]
 * number_of_philosophers : is the number of philosophers and also the number of forks
@@ -28,7 +16,7 @@
 ## CODE
 * Each philosopher should be given a number from 1 to ’number_of_philosophers’.
 * Philosopher number 1 is next to philosopher number ’number_of_philosophers’. Any other philosopher with number N is seated between philosopher N - 1 and philosopher N + 1
-* Any change of status of a philosopher must be written as follows (with X replaced with the philosopher number and timestamp_in_ms the current timestamp in mil- liseconds)
+* Any change of status of a philosopher must be written as follows (with X replaced with the philosopher number and timestamp_in_ms the current timestamp in milliseconds)
 	* timestamp_in_ms X has taken a fork ◦ timestamp_in_ms X is eating
 	* timestamp_in_ms X is sleeping
 	* timestamp_in_ms X is thinking
